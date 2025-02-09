@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Ministerio de Alabanza</h1>
+            <p>Iglesia Cenfol</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html">Inicio</a>
+            <a href="acordes.html">Acordes</a>
+            <a href="calendario.html">Calendario</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <a href="index.html" class="btn back-btn">← Volver al Inicio</a>
+
+        <section class="section">
+            <h2>🗓️ Agenda de Eventos</h2>
+            <div class="filters">
+                <input type="month" id="monthFilter" class="btn">
+                <input type="text" placeholder="Buscar por canción..." id="songFilter" class="search-box">
+            </div>
+            <div id="agendaList" class="agenda-grid"></div>
+        </section>
+    </main>
+
+    <script src="calendario.js" defer></script>
+</body>
+</html>

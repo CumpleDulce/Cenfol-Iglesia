@@ -1,0 +1,540 @@
+/* Estilos Generales */
+:root {
+    --primary-color: #2A2D34;    /* Azul oscuro/gris */
+    --secondary-color: #6B4D57;  /* Borgoña suave */
+    --accent-color: #DAA588;     /* Beige cálido para acentos */
+    --background-color: #F8F9FA;
+    --text-color: #2A2D34;
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 70px; /* Espacio para el navbar fijo */
+}
+
+/* Tipografía Ajustada */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; }
+h3 { font-size: 1.25rem; }
+
+/* Header Sólido */
+.header {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Navbar Mejorado */
+.navbar {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tarjetas Modernas */
+.card, .notification-card, .pdf-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover, .notification-card:hover, .pdf-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Botones Mejorados */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-letras {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Buscador Estilizado */
+.search-box {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid rgba(var(--secondary-color), 0.2);
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    background: white;
+    margin: 1rem 0;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(var(--secondary-color), 0.2);
+}
+
+/* Agenda Profesional */
+/* Estilos para la agenda */
+.agenda-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.agenda-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.agenda-date {
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.agenda-date .day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.agenda-date .month {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agenda-content h3 {
+    font-weight: 700; /* Bold más fuerte */
+    font-size: 1.2rem; /* Tamaño más grande */
+    color: var(--primary-color); /* Color principal */
+    margin-bottom: 0.5rem;
+}
+
+.song-list li {
+    display: inline-block;
+    background: rgba(var(--accent-color), 0.1);
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    font-weight: 500; /* Semi-bold para las canciones */
+}
+
+/* Efecto hover para las canciones */
+.song-list li:hover {
+    background: rgba(var(--secondary-color), 0.2);
+    cursor: pointer;
+}
+
+/* Letras de Canciones Estilizadas */
+.letra-container {
+    background: rgba(var(--accent-color), 0.05);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Resaltado de canciones próximas */
+.pdf-item.cancion-proxima {
+    border: 2px solid var(--secondary-color);
+    background: rgba(107, 77, 87, 0.05);
+    margin-top: 2rem;
+    padding-top: 2.5rem; /* Espacio para la etiqueta */
+}
+
+.etiqueta-proxima {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+/* Tarjetas del index.html */
+#recursos .grid {
+    gap: 2rem;
+}
+
+#recursos .card {
+    border: 2px solid rgba(218, 165, 136, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+#recursos .card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+#recursos .card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Corrección para Android */
+button, a.btn {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+button:active, a.btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Ajuste para móviles */
+    }
+
+    .navbar .container {
+        gap: 0.8rem;
+    }
+
+    .navbar a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .agenda-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card, .agenda-card {
+        padding: 1rem;
+    }
+}
+
+/* Animaciones de Entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pdf-item {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+/* Estilos para YouTube */
+/* Estilos para YouTube */
+/* Estilos para YouTube */
+.video-grid {
+    display: flex;
+    flex-direction: column; /* Una columna */
+    gap: 1.5rem; /* Espacio entre tarjetas */
+    margin-top: 1.5rem;
+    max-width: 600px; /* Ancho máximo para evitar que ocupen toda la pantalla */
+    margin-left: auto;
+    margin-right: auto; /* Centrar las tarjetas */
+}
+
+.video-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex; /* Diseño flexible */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.video-thumbnail {
+    width: 160px; /* Ancho fijo */
+    height: 90px; /* Altura proporcional (relación 16:9) */
+    object-fit: cover; /* Evita deformaciones */
+    border-radius: 10px 0 0 10px; /* Esquinas redondeadas solo a la izquierda */
+    transition: transform 0.3s;
+}
+
+.video-card:hover .video-thumbnail {
+    transform: scale(1.02); /* Efecto hover sutil */
+}
+
+.video-info {
+    padding: 1rem;
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+.video-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.1rem; /* Tamaño de fuente adecuado */
+}
+
+.video-info p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+/* Botón de YouTube */
+.btn-youtube {
+    background: var(--secondary-color) !important; /* Usar el color secundario del CSS */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem; /* Tamaño más pequeño */
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+.btn-youtube:hover {
+    background: var(--primary-color) !important; /* Usar el color primario al hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* styles.css */
+.back-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background: var(--accent-color);
+    color: var(--text-color);
+    margin: 1rem 0;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.back-btn:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: none;
+    box-shadow: none;
+}
+/* Notificaciones */
+.notificaciones-section {
+    background: rgba(218, 165, 136, 0.1);
+    border-left: 4px solid var(--secondary-color);
+    position: relative;
+}
+
+.notificaciones-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.badge {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.acceso-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.acceso-input {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+#passwordInput {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+.error-message {
+    color: #e74c3c;
+    display: none;
+    margin-top: 1rem;
+}
+/* Estilos para los nombres de las canciones */
+.pdf-item h3 {
+    font-weight: 700; /* Bold más fuerte */
+    font-size: 1.1rem; /* Tamaño ligeramente más grande */
+    color: var(--primary-color); /* Color principal */
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.pdf-item h3:hover {
+    color: var(--secondary-color); /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para los artistas */
+.artista {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* En móviles */
+@media (max-width: 768px) {
+    .pdf-item h3 {
+        font-size: 1rem; /* Tamaño un poco más pequeño en móviles */
+    }
+
+    .artista {
+        font-size: 0.85rem;
+    }
+}
+/* Estilos para el contenedor de formularios */
+#formulariosContainer {
+    margin-top: 2rem;
+}
+
+#formulariosContainer h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+#formulariosContainer .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+#formulariosContainer .card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#formulariosContainer .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#formulariosContainer .card h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#formulariosContainer .card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+#formulariosContainer .card .btn {
+    background: var(--secondary-color);
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#formulariosContainer .card .btn:hover {
+    background: var(--primary-color);
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministerio de Alabanza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Ministerio de Alabanza</h1>
+            <p>Iglesia Cenfol</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="youtube.html">YouTube</a>
+            <a href="acordes.html">Acordes</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="instrumentales.html">Instrumentales</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="recursos" class="section">
+            <h2>Recursos</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Pistas Musicales</h3>
+                    <p>Accede a pistas de acompañamiento</p>
+                    <a href="acordes.html" class="btn">Explorar</a>
+                </div>
+                <div class="card">
+                    <h3>Calendario</h3>
+                    <p>Consulta nuestro calendario de eventos</p>
+                    <a href="calendario.html" class="btn">Ver Agenda</a>
+                </div>
+                <div class="card">
+                    <h3>YouTube</h3>
+                    <p>Aquí puedes escuchar y ver las músicas</p>
+                    <a href="youtube.html" class="btn">Ver Videos</a>
+                </div>
+                <div class="card">
+                    <h3>Músicas Instrumentales</h3>
+                    <p>Accede a músicas instrumentales para acompañar la oración</p>
+                    <a href="instrumentales.html" class="btn">Explorar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Notificaciones -->
+        <section id="notificaciones" class="section notificaciones-section" style="display: none;">
+            <div class="notificaciones-header">
+                <h2>📅 Próximos Eventos</h2>
+                <button id="nuevoBtn" class="btn">Nuevo</button>
+            </div>
+            <div id="notificationsList" class="notifications-grid"></div>
+        </section>
+
+        <!-- Contenedor de Formularios -->
+        <div id="formulariosContainer" class="section" style="display: none;">
+            <h2>Agregar Nuevo</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Agendar Reunión</h3>
+                    <p>Completa el formulario para agendar una nueva reunión.</p>
+                    <a href="https://airtable.com/appLnefkDTpLYto7R/pagR5630xSTlCo58f/form" target="_blank" class="btn">Ir al Formulario</a>
+                </div>
+                <div class="card">
+                    <h3>Agregar Música</h3>
+                    <p>Completa el formulario para agregar una nueva música.</p>
+                    <a href="https://airtable.com/appLnefkDTpLYto7R/pagnEk4PL35eZkQA9/form" target="_blank" class="btn">Ir al Formulario</a>
+                </div>
+                <div class="card">
+                    <h3>Agregar Video</h3>
+                    <p>Completa el formulario para agregar un nuevo video.</p>
+                    <a href="https://airtable.com/appLnefkDTpLYto7R/pagWC1clbcvW7eKLl/form" target="_blank" class="btn">Ir al Formulario</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acceso Restringido -->
+        <div id="accesoRestringido" class="section acceso-section">
+            <h2>Acceso de Líderes</h2>
+            <p>Ingresa la contraseña para ver los eventos privados:</p>
+            <div class="acceso-input">
+                <input type="password" id="passwordInput" placeholder="••••••••">
+                <button id="verificarBtn" class="btn">Verificar</button>
+            </div>
+            <p id="mensajeError" class="error-message">Contraseña incorrecta</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Ministerio de Alabanza</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
