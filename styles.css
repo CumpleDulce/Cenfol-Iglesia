@@ -538,3 +538,57 @@ button:active, a.btn:active {
 #formulariosContainer .card .btn:hover {
     background: var(--primary-color);
 }
+/* Estilos para las canciones en acordes.html */
+.pdf-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.pdf-item h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.pdf-item .artista {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.pdf-item:hover {
+    border-color: var(--accent-color); /* Borde más visible al pasar el mouse */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo para canciones próximas */
+.pdf-item.cancion-proxima {
+    border: 2px solid var(--secondary-color); /* Borde destacado */
+    background: rgba(107, 77, 87, 0.05); /* Fondo sutil */
+    margin-top: 2rem;
+    padding-top: 2.5rem;
+    position: relative;
+}
+
+.etiqueta-proxima {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+    text-transform: uppercase;
+}
