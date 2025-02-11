@@ -215,3 +215,31 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarCanciones();
     window.addEventListener('scroll', verificarScroll);
 });
+
+
+// Función para implementar el buscador de canciones
+function configurarBuscador() {
+    const buscador = document.getElementById('buscar');
+    
+    buscador.addEventListener('input', () => {
+        const termino = buscador.value.toLowerCase();
+        const canciones = document.querySelectorAll('.pdf-item');
+        
+        canciones.forEach(cancion => {
+            const nombre = cancion.querySelector('h3').textContent.toLowerCase();
+            const artista = cancion.querySelector('.artista').textContent.toLowerCase();
+            
+            if (nombre.includes(termino) || artista.includes(termino)) {
+                cancion.style.display = 'block';
+            } else {
+                cancion.style.display = 'none';
+            }
+        });
+    });
+}
+// Modificar el evento DOMContentLoaded para incluir el buscador
+document.addEventListener('DOMContentLoaded', () => {
+    cargarCanciones();
+    configurarBuscador(); // Nueva línea
+    window.addEventListener('scroll', verificarScroll);
+});
